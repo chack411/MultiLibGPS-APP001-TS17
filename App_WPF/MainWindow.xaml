@@ -1,0 +1,15 @@
+﻿<Window x:Class="App_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:App_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="960">
+    <Grid>
+        <Label Content="Geo Location (WPF):" FontSize="32px" FontWeight="Bold" HorizontalAlignment="Left" Margin="27,20,0,0" VerticalAlignment="Top" Width="915"/>
+        <Label Name="result" Content="Latitude: --, Longitude: --" FontSize="32px" FontWeight="Bold" HorizontalAlignment="Left" Margin="27,73,0,0" VerticalAlignment="Top" Width="915"/>
+        <Button Content="位置取得" FontSize="32px" FontWeight="Bold" HorizontalAlignment="Left" Margin="27,141,0,0" VerticalAlignment="Top" Width="150" Click="Button_Click"/>
+
+    </Grid>
+</Window>
