@@ -22,12 +22,6 @@ namespace App_UWP
                     latitude = potition.Coordinate.Point.Position.Latitude;
                     longitude = potition.Coordinate.Point.Position.Longitude;
                     break;
-
-                case Windows.Devices.Geolocation.GeolocationAccessStatus.Denied:
-                    break;
-
-                case Windows.Devices.Geolocation.GeolocationAccessStatus.Unspecified:
-                    break;
             }
 
             return (latitude, longitude);
