@@ -132,6 +132,12 @@
       <Version>6.0.1</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MultiLibGPS\MultiLibGPS.csproj">
+      <Project>{a0fb0909-ab27-4c70-9035-868a4a458868}</Project>
+      <Name>MultiLibGPS</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
