@@ -11,14 +11,12 @@ namespace App_UWP
             double longitude = 0.0;
 
             var accessStatus = await Windows.Devices.Geolocation.Geolocator.RequestAccessAsync();
-            switch (accessStatus)
+            if (accessStatus == Windows.Devices.Geolocation.GeolocationAccessStatus.Allowed)
             {
-                case Windows.Devices.Geolocation.GeolocationAccessStatus.Allowed:
-                    var locator = new Windows.Devices.Geolocation.Geolocator();
-                    var potition = await locator.GetGeopositionAsync();
-                    latitude = potition.Coordinate.Point.Position.Latitude;
-                    longitude = potition.Coordinate.Point.Position.Longitude;
-                    break;
+                var locator = new Windows.Devices.Geolocation.Geolocator();
+                var potition = await locator.GetGeopositionAsync();
+                latitude = potition.Coordinate.Point.Position.Latitude;
+                longitude = potition.Coordinate.Point.Position.Longitude;
             }
 
             return (latitude, longitude);
